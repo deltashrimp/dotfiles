@@ -1,0 +1,29 @@
+// Check the wiki for a full description of the configuration:
+// https://niri-wm.github.io/niri/Configuration:-Introduction
+
+spawn-at-startup "noctalia"
+// spawn-at-startup "mpvpaper" "*" "~/.wallpapers/anim.mp4"
+
+
+// spawn-sh-at-startup "mpvpaper eDP-1 ~/.wallpapers/anim.mp4 -o \"no-audio --loop-file=inf --profile=fast --no-cache --video-sync=display-resample --osc=no --vf=scale=1920:1080\""
+
+spawn-at-startup "waypaper" "--restore"
+
+layer-rule {
+    match namespace="^mpvpaper$"
+    place-within-backdrop true
+}
+
+prefer-no-csd
+
+screenshot-path "~/Pictures/Screenshots/Screenshot %H-%M %d-%m-%Y.png"
+
+
+include "cfg/input.kdl"
+include "cfg/monitors.kdl"
+include "cfg/window-rules.kdl"
+include "cfg/layout.kdl"
+include "cfg/misc.kdl"
+include "cfg/keybinds.kdl"
+
+include "noctalia.kdl"

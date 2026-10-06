@@ -1,0 +1,113 @@
+binds {
+
+    // ───────────── Applications ─────────────
+    // Mod+Return hotkey-overlay-title="Terminal"                           { spawn "alacritty"; }
+    Mod+Return hotkey-overlay-title="Terminal" 								{ spawn "ghostty"; }
+    Mod+A repeat=false hotkey-overlay-title="Application Launcher" 			{ spawn-sh "noctalia msg panel-toggle launcher"; }
+    Mod+E hotkey-overlay-title="File Manager" 								{ spawn "nautilus"; }
+    Mod+N hotkey-overlay-title="Obsidian" 									{ spawn "obsidian"; }
+    Mod+B hotkey-overlay-title="Zen Browser" 								{ spawn "zen"; }
+    Mod+S hotkey-overlay-title="Zed" 										{ spawn "zeditor"; }
+    Mod+Shift+Q hotkey-overlay-title="Power Menu" 							{ spawn-sh "noctalia msg panel-toggle session"; }
+    Mod+Shift+E hotkey-overlay-title="Power Menu"							{ spawn-sh "noctalia msg panel-toggle liamwh/emoji-picker:compact"; }
+
+    // ───────── Shell Panels ─────────
+    Mod+H hotkey-overlay-title="Control Center"                       		{ spawn-sh "noctalia msg panel-toggle control-center"; }
+    Mod+Shift+N hotkey-overlay-title="Notes"                                { spawn-sh "noctalia msg panel-toggle noctalia/notes:panel"; }
+    Mod+V hotkey-overlay-title="Clipboard Manager"                          { spawn-sh "noctalia msg panel-toggle clipboard"; }
+    Mod+M hotkey-overlay-title="Task Manager"                               { spawn-sh "noctalia msg panel-toggle control-center system"; }
+    Mod+Y hotkey-overlay-title="Browse Wallpapers"                          { spawn-sh "noctalia msg panel-toggle wallpaper"; }
+    Mod+Shift+Y hotkey-overlay-title="Browse Video Wallpapers"                          { spawn-sh "waypaper"; }
+    Mod+Alt+L hotkey-overlay-title="Lock Screen"                            { spawn-sh "noctalia msg session lock"; }
+
+    // ───────── Media Controls ─────────
+    XF86AudioRaiseVolume allow-when-locked=true                             { spawn-sh "noctalia msg volume-up 5"; }
+    XF86AudioLowerVolume allow-when-locked=true                             { spawn-sh "noctalia msg volume-down 5"; }
+    XF86AudioMute allow-when-locked=true                                    { spawn-sh "noctalia msg volume-mute"; }
+    XF86AudioMicMute allow-when-locked=true                                 { spawn-sh "noctalia msg mic-mute"; }
+    XF86AudioNext allow-when-locked=true                                    { spawn-sh "noctalia msg media next"; }
+    XF86AudioPrev allow-when-locked=true                                    { spawn-sh "noctalia msg media previous"; }
+    XF86AudioPlay allow-when-locked=true                                    { spawn-sh "noctalia msg media toggle"; }
+    XF86AudioPause allow-when-locked=true                                   { spawn-sh "noctalia msg media toggle"; }
+
+    // ───────── Brightness Controls ─────────
+    XF86MonBrightnessUp allow-when-locked=true                              { spawn-sh "noctalia msg brightness-up 5"; }
+    XF86MonBrightnessDown allow-when-locked=true                            { spawn-sh "noctalia msg brightness-down 5"; }
+
+    // ───────── Window Focus ─────────
+    Mod+Left                        { focus-column-left; }
+    Mod+Right                       { focus-column-right; }
+    Mod+Up                          { focus-window-up; }
+    Mod+Down                        { focus-window-down; }
+
+    // ───────── Window Movement ─────────
+    Mod+Shift+Left                  { move-column-left; }
+    Mod+Shift+Right                 { move-column-right; }
+    Mod+Shift+Up                    { move-window-up; }
+    Mod+Shift+Down                  { move-window-down; }
+
+    // ───────── Monitor Focus ─────────
+    Mod+Ctrl+Left                   { focus-monitor-left; }
+    Mod+Ctrl+Right                  { focus-monitor-right; }
+    Mod+Ctrl+Up                     { focus-monitor-up; }
+    Mod+Ctrl+Down                   { focus-monitor-down; }
+
+    // ───────── Monitor Movement ─────────
+    Mod+Shift+Ctrl+Left             { move-column-to-monitor-left; }
+    Mod+Shift+Ctrl+Right            { move-column-to-monitor-right; }
+    Mod+Shift+Ctrl+Up               { move-column-to-monitor-up; }
+    Mod+Shift+Ctrl+Down             { move-column-to-monitor-down; }
+
+    // ───────── Workspace Switching ─────────
+    Mod+1                           { focus-workspace 1; }
+    Mod+2                           { focus-workspace 2; }
+    Mod+3                           { focus-workspace 3; }
+    Mod+4                           { focus-workspace 4; }
+    Mod+5                           { focus-workspace 5; }
+    Mod+6                           { focus-workspace 6; }
+    Mod+7                           { focus-workspace 7; }
+    Mod+8                           { focus-workspace 8; }
+    Mod+9                           { focus-workspace 9; }
+
+    // ───────── Workspace Movement ─────────
+    Mod+Ctrl+1                      { move-column-to-workspace 1; }
+    Mod+Ctrl+2                      { move-column-to-workspace 2; }
+    Mod+Ctrl+3                      { move-column-to-workspace 3; }
+    Mod+Ctrl+4                      { move-column-to-workspace 4; }
+    Mod+Ctrl+5                      { move-column-to-workspace 5; }
+    Mod+Ctrl+6                      { move-column-to-workspace 6; }
+    Mod+Ctrl+7                      { move-column-to-workspace 7; }
+    Mod+Ctrl+8                      { move-column-to-workspace 8; }
+    Mod+Ctrl+9                      { move-column-to-workspace 9; }
+    Mod+Page_Up                     { focus-workspace-up; }
+    Mod+Page_Down                   { focus-workspace-down; }
+
+    // ───────── Layout Controls ─────────
+    Mod+F                           { expand-column-to-available-width; }
+    Mod+C                           { center-column; }
+    Mod+Ctrl+C                      { center-visible-columns; }
+    Mod+Minus                       { set-column-width "-10%"; }
+    Mod+Equal                       { set-column-width "+10%"; }
+    Mod+Shift+Minus                 { set-window-height "-10%"; }
+    Mod+Shift+Equal                 { set-window-height "+10%"; }
+    Mod+BracketLeft                 { consume-or-expel-window-left; }
+    Mod+BracketRight                { consume-or-expel-window-right; }
+
+    // ───────── Window Modes ─────────
+    Mod+T                           { toggle-window-floating; }
+    Mod+Shift+T                     { switch-focus-between-floating-and-tiling; }
+    Mod+W                           { toggle-column-tabbed-display; }
+    Mod+Ctrl+F                      { fullscreen-window; }
+
+    // ───────── Screenshots ─────────
+    Ctrl+Shift+1                    { screenshot; }
+    Ctrl+Shift+2                    { screenshot-screen; }
+    Ctrl+Shift+3                    { screenshot-window; }
+     
+    // ───────── Window Management ─────────
+    Mod+Q repeat=false              { close-window; }
+    Mod+Shift+P                     { power-off-monitors; }
+    Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
+    Mod+O repeat=false              { toggle-overview; }
+    Mod+Shift+Slash                 { show-hotkey-overlay; }
+}

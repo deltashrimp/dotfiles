@@ -1,0 +1,217 @@
+[accessibility]
+ui_scale = 1.1000000089406967
+
+[audio]
+enable_sounds = true
+
+[bar.default]
+end = [ "tray", "notifications", "volume", "brightness", "battery" ]
+layer = "overlay"
+margin_ends = 10
+padding = 20
+radius = 10
+scale = 1.300000011920929
+shadow = false
+start = [ "launcher", "clipboard", "workspaces" ]
+thickness = 40
+
+[battery]
+warning_threshold = 30
+
+[brightness]
+minimum_brightness = 0.04999999888241291
+
+[control_center]
+hidden_tabs = [ "media", "monitor", "weather", "screen-time" ]
+show_shortcut_labels = false
+width = 950
+
+    [[control_center.shortcuts]]
+    type = "wifi"
+
+    [[control_center.shortcuts]]
+    type = "bluetooth"
+
+    [[control_center.shortcuts]]
+    type = "caffeine"
+
+    [[control_center.shortcuts]]
+    type = "power_profile"
+
+[idle]
+behavior_order = [ "lock", "screen-off", "lock-and-suspend" ]
+pre_action_fade_seconds = 10
+
+    [idle.behavior.lock]
+    action = "lock"
+    enabled = true
+    timeout = 360.0
+
+    [idle.behavior.lock-and-suspend]
+    action = "lock_and_suspend"
+    enabled = true
+    timeout = 420.0
+
+    [idle.behavior.screen-off]
+    action = "screen_off"
+    enabled = true
+    timeout = 300.0
+
+[lockscreen_widgets]
+enabled = false
+schema_version = 2
+widget_order = [ "lockscreen-login-box@eDP-1" ]
+
+    [lockscreen_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@eDP-1"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 960.0
+    cy = 898.0
+    output = "eDP-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@eDP-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+[notification]
+background_opacity = 0.8
+
+[osd]
+background_opacity = 0.8
+
+[plugins]
+enabled = [ "noctalia/notes" ]
+
+[shell]
+button_borders = false
+card_borders = false
+corner_radius_scale = 2.0
+font_family = "Adwaita Sans"
+input_borders = false
+niri_overview_type_to_launch_enabled = true
+panel_anchor_bar = "default"
+polkit_agent = true
+popup_borders = false
+popup_shadows = false
+
+    [shell.launcher]
+    app_grid = true
+    fetch_exchange_rates = false
+
+        [shell.launcher.providers.emoji]
+        global = true
+
+    [shell.panel]
+    borders = false
+    control_center_placement = "floating"
+    control_center_position = "center"
+    session_placement = "floating"
+    session_position = "center"
+    shadow = false
+    wallpaper_placement = "floating"
+    wallpaper_position = "center"
+
+    [shell.session]
+    grid = true
+    grid_columns = 5
+    show_shortcuts = false
+
+        [[shell.session.actions]]
+        action = "lock"
+        countdown_seconds = 0.0
+        enabled = true
+        shortcut = "1"
+        variant = "default"
+
+        [[shell.session.actions]]
+        action = "logout"
+        countdown_seconds = 0.0
+        enabled = true
+        shortcut = "2"
+        variant = "default"
+
+        [[shell.session.actions]]
+        action = "lock_and_suspend"
+        countdown_seconds = 0.0
+        enabled = true
+        shortcut = "3"
+        variant = "default"
+
+        [[shell.session.actions]]
+        action = "reboot"
+        countdown_seconds = 0.0
+        enabled = true
+        shortcut = "4"
+        variant = "default"
+
+        [[shell.session.actions]]
+        action = "shutdown"
+        countdown_seconds = 0.0
+        enabled = true
+        shortcut = "5"
+        variant = "default"
+
+    [shell.shadow]
+    alpha = 0.0
+
+[theme]
+community_palette = "Everforest Material"
+mode = "dark"
+source = "community"
+wallpaper_scheme = "m3-content"
+icon_theme = "YAMIS"
+
+    [theme.templates]
+    builtin_ids = [ "btop", "cava", "gtk3", "gtk4", "ghostty", "qt" ]
+    community_ids = [ "opencode", "zen-browser", "telegram", "micro", "zed", "papirus-icons", "bat", "yazi" ]
+
+[wallpaper]
+directory = "/home/duck/.wallpapers"
+
+    [wallpaper.default]
+    path = "/home/duck/.wallpapers/porsche-forest.jpg"
+
+    [wallpaper.last]
+    path = "/home/duck/.wallpapers/porsche-forest.jpg"
+
+    [wallpaper.monitors.eDP-1]
+    path = "/home/duck/.wallpapers/porsche-forest.jpg"
+
+    [[wallpaper.favorite]]
+    community_palette = "Everforest Material"
+    palette_source = "community"
+    path = "/home/duck/.wallpapers/agnes-20.jpeg"
+    theme_mode = "dark"
+
+    [[wallpaper.favorite]]
+    community_palette = "Everforest Material"
+    palette_source = "community"
+    path = "/home/duck/.wallpapers/porsche-forest.jpg"
+    theme_mode = "dark"
+
+[weather]
+enabled = false
+
+[widget.launcher]
+glyph = "niri"

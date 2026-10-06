@@ -1,0 +1,42 @@
+input {
+    keyboard {
+        xkb {
+            // You can set rules, model, layout, variant and options.
+            // For more information, see xkeyboard-config(7).
+
+            // For example:
+            // layout "us,ru"
+            // options "grp:win_space_toggle,compose:ralt,ctrl:nocaps"
+
+            layout "us,ru,cz"
+            options "grp:win_space_toggle,compose:ralt"
+        }
+
+        // Uncomment to enable numlock on startup, omitting this setting disables it.
+        // numlock
+    }
+
+    touchpad {
+        tap
+        dwt
+        natural-scroll
+        accel-speed 0.3
+        accel-profile "flat"
+        scroll-method "two-finger"
+        scroll-factor 0.3
+    }
+
+    mouse {
+    	accel-speed 0.4
+        accel-profile "flat"
+    }
+}
+
+recent-windows {
+    binds {
+        Alt+Tab         { next-window scope="output"; }
+        Alt+Shift+Tab   { previous-window scope="output"; }
+        Alt+grave       { next-window filter="app-id"; }
+        Alt+Shift+grave { previous-window filter="app-id"; }
+    }
+}
