@@ -2,14 +2,10 @@
 // https://niri-wm.github.io/niri/Configuration:-Introduction
 
 spawn-at-startup "noctalia"
-// spawn-at-startup "mpvpaper" "*" "~/.wallpapers/anim.mp4"
 
+// spawn-at-startup "waypaper" "--restore"
 
-// spawn-sh-at-startup "mpvpaper eDP-1 ~/.wallpapers/anim.mp4 -o \"no-audio --loop-file=inf --profile=fast --no-cache --video-sync=display-resample --osc=no --vf=scale=1920:1080\""
-
-spawn-at-startup "waypaper" "--restore"
-
-layer-rule {
+/-layer-rule {
     match namespace="^mpvpaper$"
     place-within-backdrop true
 }
@@ -25,5 +21,10 @@ include "cfg/window-rules.kdl"
 include "cfg/layout.kdl"
 include "cfg/misc.kdl"
 include "cfg/keybinds.kdl"
+
+// Animation preset (Material 3): uncomment exactly one of the lines below.
+include "cfg/animations-expressive.kdl"
+// include "cfg/animations-default.kdl"
+// include "cfg/animations-calm.kdl"
 
 include "noctalia.kdl"

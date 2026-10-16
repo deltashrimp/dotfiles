@@ -1,0 +1,66 @@
+// ============================================================
+// Material 3 Expressive — animation preset
+//
+// Based on Google's M3 Expressive motion physics:
+//   - Spatial springs are underdamped (slight bounce/overshoot):
+//       fast spatial:   damping-ratio=0.6 stiffness=800
+//       default spatial: damping-ratio=0.8 stiffness=380
+//   - Effects springs are critically damped (damping-ratio=1.0)
+//   - Easing uses the "emphasized" curves with medium durations
+// ============================================================
+animations {
+    workspace-switch {
+        // Expressive fast spatial spring: snappy with a slight bounce
+        spring damping-ratio=0.8 stiffness=600 epsilon=0.0001
+    }
+
+    window-open {
+        duration-ms 250 // medium1
+        // Emphasized decelerate: cubic-bezier(0.05, 0.7, 0.1, 1)
+        curve "cubic-bezier" 0.05 0.7 0.1 1
+    }
+
+    window-close {
+        duration-ms 200 // short4
+        // Emphasized accelerate: cubic-bezier(0.3, 0, 0.8, 0.15)
+        curve "cubic-bezier" 0.3 0 0.8 0.15
+    }
+
+    // The three below should stay identical: niri synchronizes
+    // these animations with each other during resizes.
+    horizontal-view-movement {
+        // Expressive default spatial spring: lively, slight overshoot
+        spring damping-ratio=0.8 stiffness=380 epsilon=0.0001
+    }
+    window-movement {
+        spring damping-ratio=0.8 stiffness=380 epsilon=0.0001
+    }
+    window-resize {
+        spring damping-ratio=0.8 stiffness=380 epsilon=0.0001
+    }
+
+    config-notification-open-close {
+        // Expressive fast spatial: playful bounce for a small toast
+        spring damping-ratio=0.6 stiffness=800 epsilon=0.001
+    }
+
+    exit-confirmation-open-close {
+        // Underdamped dialog entrance, as in M3
+        spring damping-ratio=0.6 stiffness=500 epsilon=0.01
+    }
+
+    screenshot-ui-open {
+        duration-ms 300 // medium2
+        curve "cubic-bezier" 0.05 0.7 0.1 1 // emphasized decelerate
+    }
+
+    overview-open-close {
+        // Hero interaction: fast spatial, expressive bounce
+        spring damping-ratio=0.6 stiffness=800 epsilon=0.0001
+    }
+
+    recent-windows-close {
+        // Expressive default effects spring: critically damped, crisp
+        spring damping-ratio=1.0 stiffness=1600 epsilon=0.001
+    }
+}

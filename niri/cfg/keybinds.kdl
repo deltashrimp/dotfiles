@@ -2,7 +2,8 @@ binds {
 
     // ───────────── Applications ─────────────
     // Mod+Return hotkey-overlay-title="Terminal"                           { spawn "alacritty"; }
-    Mod+Return hotkey-overlay-title="Terminal" 								{ spawn "ghostty"; }
+    Mod+Return hotkey-overlay-title="Termi
+    nal" 								{ spawn "ghostty"; }
     Mod+A repeat=false hotkey-overlay-title="Application Launcher" 			{ spawn-sh "noctalia msg panel-toggle launcher"; }
     Mod+E hotkey-overlay-title="File Manager" 								{ spawn "nautilus"; }
     Mod+N hotkey-overlay-title="Obsidian" 									{ spawn "obsidian"; }
@@ -12,7 +13,7 @@ binds {
     Mod+Shift+E hotkey-overlay-title="Power Menu"							{ spawn-sh "noctalia msg panel-toggle liamwh/emoji-picker:compact"; }
 
     // ───────── Shell Panels ─────────
-    Mod+H hotkey-overlay-title="Control Center"                       		{ spawn-sh "noctalia msg panel-toggle control-center"; }
+    Mod+D hotkey-overlay-title="Control Center"                       		{ spawn-sh "noctalia msg panel-toggle control-center"; }
     Mod+Shift+N hotkey-overlay-title="Notes"                                { spawn-sh "noctalia msg panel-toggle noctalia/notes:panel"; }
     Mod+V hotkey-overlay-title="Clipboard Manager"                          { spawn-sh "noctalia msg panel-toggle clipboard"; }
     Mod+M hotkey-overlay-title="Task Manager"                               { spawn-sh "noctalia msg panel-toggle control-center system"; }
