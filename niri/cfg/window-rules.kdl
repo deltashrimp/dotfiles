@@ -41,6 +41,10 @@ blur {
   saturation 1.0  // color saturation boost (default: 1.5)
 }
 
+layout {
+    always-center-single-column
+}
+
 window-rule {
     match app-id=r#"^org\.keepassxc\.KeePassXC$"#
     match app-id=r#"^org\.gnome\.World\.Secrets$"#
@@ -91,4 +95,12 @@ window-rule {
 window-rule {
 	match app-id="waypaper"
 	open-floating true
+}
+
+window-rule {
+	match app-id="spun"
+	draw-border-with-background false
+	focus-ring {
+		off
+	}
 }
