@@ -1,0 +1,42 @@
+layer-rule {
+    match namespace="^quickshell$"
+    place-within-backdrop true
+}
+
+layer-rule {
+  match namespace="^noctalia-wallpaper"
+  place-within-backdrop true
+}
+
+layout {
+  background-color "transparent"
+}
+
+overview {
+  workspace-shadow {
+    off
+  }
+}
+
+environment {
+  XDG_CURRENT_DESKTOP "niri"
+  QT_QPA_PLATFORMTHEME "qt6ct"
+}
+
+hotkey-overlay {
+    skip-at-startup
+}
+
+config-notification {
+    disable-failed
+}
+
+gestures {
+    hot-corners {
+        off
+    }
+}
+
+debug {
+    honor-xdg-activation-with-invalid-serial
+}
